@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/mssql/server:2017-CU12-ubuntu
+FROM mcr.microsoft.com/mssql/server:2019-GA-ubuntu-16.04
 
 # Create a config directory
 RUN mkdir -p /usr/config
@@ -8,8 +8,10 @@ WORKDIR /usr/config
 COPY . /usr/config
 
 # Grant permissions for to our scripts to be executable
+USER root
 RUN chmod +x /usr/config/entrypoint.sh
 RUN chmod +x /usr/config/configure-db.sh
+USER mssql
 
 ENTRYPOINT ["./entrypoint.sh"]
 
