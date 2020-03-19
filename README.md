@@ -6,7 +6,7 @@ Image is hosted on [Dockerhub](https://hub.docker.com/repository/docker/nicoruti
 Use the following command to start:
 
 ```
-docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<admin-password>' -e 'MSSQL_DB=<db-name>' -e 'MSSQL_USER=<username>' -e 'MSSQL_PASSWORD=<password>' -p 1433:1433 microsoft/mssql-server-linux:2017-latest
+docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<admin-password>' -e 'MSSQL_DB=<db-name>' -e 'MSSQL_USER=<username>' -e 'MSSQL_PASSWORD=<password>' -p 1433:1433 nicoruti/mssql:latest
 ```
 
 ## Variables
